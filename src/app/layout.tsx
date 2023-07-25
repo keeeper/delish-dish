@@ -1,5 +1,5 @@
 import './globals.css'
-import Header from '@/components/Header'
+import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Delish dish',
@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-bg-clr">
         <Header />
         <main>
-          {children}
+            {children}
         </main>
       </body>
     </html>
