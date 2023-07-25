@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Tag from "@/components/Tag";
+import Chef from "@/components/Chef";
+import Description from '@/components/Description';
 import { getRecipeData } from "@/utils/recipe";
 import { apiUrl, spaceKey, accessToken } from '@/constants/api';
 import { RecipeParams, RecipeProps } from "@/types/types";
@@ -33,27 +36,31 @@ const Recipe = ({params}: {params: RecipeParams}) => {
   }
 
   return (
-    <section>
+    <section className="max-w-[640px] w-full mx-auto sm:rounded-2xl bg-white overflow-hidden">
       {recipe ? (
         <div>
           <Image 
-            src={recipe.photo.url}
-            alt={recipe.photo.title}
-            width={600}
-            height={320} 
+            src={recipe?.photo?.url || ""}
+            alt={recipe?.photo?.title || ""}
+            width={640}
+            height={360} 
             priority={true}
           />
-          <h1>{recipe.title}</h1>
-          <p>{recipe.description}</p>
-          {recipe.tags && (
-            <div>
-              {recipe.tags.map((tag: any) => (
-                <div key={tag.sys.id}>{tag.fields.name}</div>
-              ))}
-            </div>
-          )}
-          <div>
-              {recipe.chef}
+          <div className="p-6">
+            <h1 className="text-2xl font-bold text-text-primary">{recipe.title}</h1>
+            {recipe.tags && (
+              <div className="mt-4">
+                {recipe.tags.map((tag: any) => (
+                  <Tag key={tag.sys.id} name={tag.fields.name}/>
+                ))}
+              </div>
+            )}
+            {recipe.description && (
+              <Description text={recipe.description}/>
+            )}
+            {recipe.chef && (
+              <Chef name={recipe.chef} />
+            )}
           </div>
         </div>
       ) : (

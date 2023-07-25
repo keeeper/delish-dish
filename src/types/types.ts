@@ -1,7 +1,7 @@
 export type RecipeCardProps = {
   id: string,
   title: string,
-  photo: RecipeCardPhotoProps
+  photo?: RecipeCardPhotoProps
 }
 
 export type RecipeCardPhotoProps = {
@@ -15,13 +15,26 @@ export type RecipeParams = {
 
 export type RecipeProps = {
   title: string,
-  description: string,
-  photo: RecipePhotoProps,
-  tags: [],
-  chef: string
+  description?: string,
+  photo?: RecipePhotoProps,
+  tags?: [],
+  chef?: string
 }
 
 export type RecipePhotoProps = {
-  url: string,
-  title: string
+  url?: string,
+  title?: string
+}
+
+export type RecipeTagProps = {
+  name: string | undefined
+}
+
+export type RecipeChefProps = {
+  name: string | undefined,
+  imageUrl?: string
+}
+
+export type RecipeDescriptionfProps = {
+  text: string | undefined,
 }
