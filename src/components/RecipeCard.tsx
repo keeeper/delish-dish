@@ -6,10 +6,9 @@ const RecipeCard:React.FC<RecipeCardProps> = ({id, title, photo}) => {
   return (
     <Link className="relative rounded-xl overflow-hidden group" href={`recipes/${id}`}>
       <Image src={photo?.url || ""} alt={photo?.title || ""} width={600} height={360}/>
-      <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-10 transition"></div>
-      <h4 className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 text-white text-xl sm:text-2xl font-bold group-hover:translate-y-[100px] transition">{title}</h4>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-40% to-transparent to-50% opacity-60 group-hover:opacity-0 transition"></div>
+      <h4 className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 text-white text-xl sm:text-2xl font-bold group-hover:translate-y-[100px] transition ease-in-out duration-150">{title}</h4>
     </Link>
-    
   )
 }
 

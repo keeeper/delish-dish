@@ -2,8 +2,8 @@ import './globals.css'
 import Header from '@/components/Header'
 
 export const metadata = {
-  title: 'DelishDish',
-  description: 'Recipe ideas',
+  title: 'delish dish',
+  description: 'recipe ideas',
 }
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-bg">
+      <body className="min-h-screen flex flex-col bg-bg-clr">
         <Header />
         <main>
           {children}

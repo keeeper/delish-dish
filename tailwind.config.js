@@ -9,13 +9,14 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
+        comfortaa: ['Comfortaa', 'sans-serif']
       },
       colors: {
-        'primary': '#0C9A61',
-        'primaryTransparent': 'rgba(12, 154, 97, 0.1)',
-        'bg': '#FBFBFB',
-        'text-primary': '#242424',
-        'text-secondary': '#9C9C9C',
+        'theme-primary-clr': '#0C9A61',
+        'theme-primaryTransparent-clr': 'rgba(12, 154, 97, 0.1)',
+        'bg-clr': '#FBFBFB',
+        'text-clr-primary': '#242424',
+        'text-clr-secondary': '#9C9C9C',
       },
       borderWidth: {
         DEFAULT: '1px',

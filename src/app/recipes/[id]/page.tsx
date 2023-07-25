@@ -15,7 +15,7 @@ const Recipe = ({params}: {params: RecipeParams}) => {
   const [recipe, setRecipe] = useState<RecipeProps>();
   const { id } = params;
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchRecipe();
   }, [id]);
 
@@ -37,7 +37,7 @@ const Recipe = ({params}: {params: RecipeParams}) => {
 
   return (
     <section className="max-w-[640px] w-full mx-auto sm:rounded-2xl bg-white overflow-hidden">
-      {recipe ? (
+      {!!recipe && (
         <div>
           <Image 
             src={recipe?.photo?.url || ""}
@@ -47,7 +47,7 @@ const Recipe = ({params}: {params: RecipeParams}) => {
             priority={true}
           />
           <div className="p-6">
-            <h1 className="text-2xl font-bold text-text-primary">{recipe.title}</h1>
+            <h1 className="text-2xl font-bold text-text-clr-primary">{recipe.title}</h1>
             {recipe.tags && (
               <div className="mt-4">
                 {recipe.tags.map((tag: any) => (
@@ -63,8 +63,6 @@ const Recipe = ({params}: {params: RecipeParams}) => {
             )}
           </div>
         </div>
-      ) : (
-        <p>Loading</p>
       )}
       <ToastContainer hideProgressBar={true} />
     </section>
