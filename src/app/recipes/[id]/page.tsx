@@ -43,7 +43,7 @@ const Recipe = ({params}: {params: RecipeParams}) => {
             src={recipe?.photo?.url || ""}
             alt={recipe?.photo?.title || ""}
             width={640}
-            height={360} 
+            height={420} 
             priority={true}
           />
           <div className="p-6">
