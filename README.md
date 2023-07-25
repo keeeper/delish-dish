@@ -12,7 +12,6 @@ CONTENTFUL_ACCESS_TOKEN={Access Token}
 ##### Install modules
 ```bash
 npm i
-npm run dev
 ```
 ##### Run dev server
 ```bash
