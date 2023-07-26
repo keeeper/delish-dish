@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <p className="my-12 text-center text-text-primary-clr">Thanks for your time !</p>
+    <p className="my-12 text-center text-text-secondary-clr font-comfortaa">Thanks for visiting !</p>
   )
 }
 
