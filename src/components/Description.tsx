@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm'
 const Description:React.FC<RecipeDescriptionfProps> = ({text}) => {
   return (
     <div className="mt-4">
-      <p className="text-text-primary-clr text-xl  mb-2">Story</p>
+      <p className="text-text-primary-clr text-xl font-comfortaa mb-2">Story</p>
       <div className="text-text-secondary-clr leading-5">
         <ReactMarkdown children={text || ''} remarkPlugins={[remarkGfm]} />
       </div>

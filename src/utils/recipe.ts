@@ -32,7 +32,7 @@ export const getRecipeData = (data: any) => {
     title: data.items[0]?.fields?.title,
     description: data?.items[0]?.fields?.description,
     photo: {
-      url: `https://${data?.includes?.Asset[0]?.fields.file.url}`,
+      url: `https:${data?.includes?.Asset[0]?.fields.file.url}`,
       title: data?.includes?.Asset[0].fields.title
     },
     tags: getRecipeTags(data.includes.Entry),
