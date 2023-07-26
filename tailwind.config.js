@@ -15,8 +15,8 @@ module.exports = {
         'theme-primary-clr': '#0C9A61',
         'theme-primaryTransparent-clr': 'rgba(12, 154, 97, 0.1)',
         'bg-clr': '#FBFBFB',
-        'text-clr-primary': '#242424',
-        'text-clr-secondary': '#9C9C9C',
+        'text-primary-clr': '#242424',
+        'text-secondary-clr': '#9C9C9C',
       },
       borderWidth: {
         DEFAULT: '1px',

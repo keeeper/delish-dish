@@ -11,3 +11,11 @@ body {
   line-height: 1;
   @apply font-inter
 }
+
+.btn-primary {
+  @apply flex rounded-md bg-theme-primary-clr py-3 px-4 text-white hover:bg-text-secondary-clr transition  disabled:opacity-60 disabled:pointer-events-none;
+}
+
+.btn-outline {
+  @apply flex rounded-md border border-theme-primary-clr py-3 px-4 text-text-primary-clr hover:bg-theme-primaryTransparent-clr transition;
+}

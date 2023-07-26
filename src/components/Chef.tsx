@@ -12,7 +12,7 @@ const Chef:React.FC<RecipeChefProps> = ({name, imageUrl}) => {
         height={60} 
         className="rounded-full mr-4"
       />
-      <div className="flex flex-col text-text-clr-primary"><span className="text-text-clr-secondary mb-1">Presented by</span> {name}</div>
+      <div className="flex flex-col text-text-primary-clr"><span className="text-text-secondary-clr mb-1">Presented by</span> {name}</div>
     </div>
   )
 }

@@ -38,3 +38,13 @@ export type RecipeChefProps = {
 export type RecipeDescriptionfProps = {
   text: string | undefined,
 }
+
+export type StarRatingProps = {
+  rating: number,
+  handleRatingChange: (e:any) => void
+}
+
+export type FormDataProps = {
+  rating: number,
+  review?: string
+}
