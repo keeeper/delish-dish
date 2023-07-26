@@ -25,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the result.
 - Responsive: add more breakpoints for wider range of devices
 - Fix warnings
 - User friendly url for single recipe (replace id with slug)
-- Add form submission, error handling (API endpoint needed)
+- Add proper form submission, messaging, error handling (API endpoint needed)
 - Accessibility improvements
 - Tests
 - More advanced loaders (skeletons)
