@@ -1,5 +1,5 @@
 export type RecipeCardProps = {
-  id: string,
+  _id: string,
   title: string,
   photo?: RecipeCardPhotoProps
 }
@@ -35,7 +35,7 @@ export type RecipeChefProps = {
   imageUrl?: string
 }
 
-export type RecipeDescriptionfProps = {
+export type RecipeDescriptionProps = {
   text: string | undefined,
 }
 

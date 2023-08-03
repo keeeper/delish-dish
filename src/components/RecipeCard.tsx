@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { RecipeCardProps } from "@/types/types";
 
-const RecipeCard:React.FC<RecipeCardProps> = ({id, title, photo}) => {
+const RecipeCard:React.FC<RecipeCardProps> = ({_id, title, photo}) => {
   return (
-    <Link className="relative rounded-xl overflow-hidden group" href={`recipes/${id}`}>
+    <Link className="relative rounded-xl overflow-hidden group" href={`recipes/${_id}`}>
       <Image 
         src={photo?.url || ""}
         alt={photo?.title || ""}

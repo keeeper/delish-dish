@@ -3,23 +3,22 @@ import Tag from "@/components/Tag";
 import Chef from "@/components/Chef";
 import Description from '@/components/Description';
 import Review from "@/components/Review";
-import { getRecipeData } from "@/utils/recipe";
-import { apiUrl, spaceKey, accessToken } from '@/constants/api';
 import { RecipeParams, RecipeProps } from "@/types/types";
 
-async function fetchRecipe (id: string) {
-  const url = `${apiUrl}/spaces/${spaceKey}/entries?sys.id=${id}&access_token=${accessToken}`;
-  const response = await fetch(url);
+async function fetchRecipe(id: string) {
+  const url = `${process.env.HOST_URI}/api/recipes/${id}`;
+  const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Failed to fetch data');
   }
-  return response.json();
+  const data = await response.json();
+  return data;
 }
 
 export default async function Recipe({params}: {params: RecipeParams}) {
   const { id } = params;
-  const recipeData = await fetchRecipe(id);
-  const recipe:RecipeProps = getRecipeData(recipeData);
+  const recipe:RecipeProps = await fetchRecipe(id);
+  
   return (
     <section className="max-w-[640px] w-full mx-auto sm:rounded-2xl bg-white overflow-hidden">
       {!!recipe && (
@@ -40,10 +39,10 @@ export default async function Recipe({params}: {params: RecipeParams}) {
                 <span className="ml-1 text-text-secondary-clr">(246)</span>
               </div>
             </header>
-            {recipe.tags && (
+            {!!recipe?.tags && (
               <div className="mt-4">
-                {recipe.tags.map((tag: any) => (
-                  <Tag key={tag.sys.id} name={tag.fields.name}/>
+                {recipe?.tags.map((tag: any) => (
+                  <Tag key={tag.name} name={tag.name}/>
                 ))}
               </div>
             )}
