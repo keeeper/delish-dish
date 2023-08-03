@@ -4,21 +4,11 @@ import Chef from "@/app/components/Chef";
 import Description from '@/app/components/Description';
 import Review from "@/app/components/Review";
 import { RecipeParams, RecipeProps } from "@/types/types";
-import { getRecipe } from "@/utils/recipes";
-
-// async function fetchRecipe(id: string) {
-//   const url = `/api/recipes/${id}/`;
-//   const response = await fetch(url, { cache: 'no-store' });
-//   if (!response.ok) {
-//     throw new Error('Failed to fetch data');
-//   }
-//   const data = await response.json();
-//   return data;
-// }
+import { getRecipe } from "@/utils/getData";
 
 export default async function Recipe({params}: {params: RecipeParams}) {
   const { id } = params;
-  // const recipe:RecipeProps = await fetchRecipe(id);
+
   const recipe:RecipeProps = await getRecipe(id);
   
   return (

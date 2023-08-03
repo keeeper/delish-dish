@@ -7,12 +7,11 @@ export const getAllRecipes = async () => {
   
     const recipes = await Recipe.find();
 
-    // if (!recipes || recipes.length === 0) return new Response("Recipe not found", {status: 404});
-    
+    if (!recipes || recipes.length === 0) console.log("Recipes can not be fetched");
+
     return recipes;
   } catch(error) {
     console.log(error);
-    // return new Response("Failed to retrieve recipes", {status: 500});
   }
 }
 
@@ -22,11 +21,9 @@ export const getRecipe = async (id) => {
   
     const recipe = await Recipe.findById(id);
 
-    // if (!recipe) return new Response("Recipe not found", {status: 404});
-    return recipe
-    // return new Response(JSON.stringify(recipe), {status: 200})
+    if (!recipe) console.log("Recipe can not be fetched");
+    return recipe;
   } catch(error) {
     console.log(error);
-    // return new Response("Failed to retrieve recipes", {status: 500});
   }
 }
