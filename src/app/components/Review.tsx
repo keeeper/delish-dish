@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import StarRating from "@/components/StarRating";
+import StarRating from "@/app/components/StarRating";
 import { FormDataProps } from "@/types/types";
 
 const Review = () => {

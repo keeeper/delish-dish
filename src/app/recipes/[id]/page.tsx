@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Tag from "@/components/Tag";
-import Chef from "@/components/Chef";
-import Description from '@/components/Description';
-import Review from "@/components/Review";
+import Tag from "@/app/components/Tag";
+import Chef from "@/app/components/Chef";
+import Description from '@/app/components/Description';
+import Review from "@/app/components/Review";
 import { RecipeParams, RecipeProps } from "@/types/types";
 import { getRecipe } from "@/utils/recipes";
 
@@ -20,7 +20,6 @@ export default async function Recipe({params}: {params: RecipeParams}) {
   const { id } = params;
   // const recipe:RecipeProps = await fetchRecipe(id);
   const recipe:RecipeProps = await getRecipe(id);
-  console.log(recipe)
   
   return (
     <section className="max-w-[640px] w-full mx-auto sm:rounded-2xl bg-white overflow-hidden">
