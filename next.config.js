@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  distDir: "build"
+}
 const { parsed: envVariables } = require('dotenv').config();
 
 module.exports = {

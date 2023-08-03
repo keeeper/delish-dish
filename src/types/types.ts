@@ -27,16 +27,17 @@ export type RecipePhotoProps = {
 }
 
 export type RecipeTagProps = {
-  name: string | undefined
+  name: string,
+  url?: string
 }
 
 export type RecipeChefProps = {
-  name: string | undefined,
+  name: string,
   imageUrl?: string
 }
 
 export type RecipeDescriptionProps = {
-  text: string | undefined,
+  text: string,
 }
 
 export type StarRatingProps = {
