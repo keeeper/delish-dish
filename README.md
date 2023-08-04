@@ -8,7 +8,6 @@ To view version with Contentful APi pls switch to branch **contentful_api**
 [https://delish-dish.vercel.app/](https://delish-dish.vercel.app/)
 
 ## Possible improvements
-- Typescript: avoid use of `any`
 - Responsive: add more breakpoints for wider range of devices
 - User friendly url for single recipe (replace id with slug)
 - Add proper form submission, messaging, error handling (API endpoint needed)

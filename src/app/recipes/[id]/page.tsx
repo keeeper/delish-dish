@@ -3,7 +3,7 @@ import Tag from "@/app/components/Tag";
 import Chef from "@/app/components/Chef";
 import Description from '@/app/components/Description';
 import Review from "@/app/components/Review";
-import { RecipeParams, RecipeProps } from "@/types/types";
+import { RecipeParams, RecipeProps, RecipeTagProps } from "@/types/types";
 import { getRecipe } from "@/utils/getData";
 
 export default async function Recipe({params}: {params: RecipeParams}) {
@@ -33,7 +33,7 @@ export default async function Recipe({params}: {params: RecipeParams}) {
             </header>
             {!!recipe?.tags && (
               <div className="mt-4">
-                {recipe?.tags.map((tag: any) => (
+                {recipe?.tags.map((tag: RecipeTagProps) => (
                   <Tag key={tag.name} name={tag.name}/>
                 ))}
               </div>
